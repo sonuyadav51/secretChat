@@ -1,15 +1,6 @@
 <?php  error_reporting(0);?>
 <?php 
-  include("./model/connectdb.php");
-  session_start();
-  $id = $_SESSION['id'];
-  if(isset($_SESSION['id']) && !isset($_GET['status'])){
-      header("Location:home.php?id=$id");
-   }
-    $user_id = $_GET['id'];
-    $query = "SELECT * FROM `user` WHERE user_id = '$user_id'";
-    $fire = mysqli_query($conn,$query);
-    $data = mysqli_fetch_assoc($fire);
+  
 
 ?>
 <!DOCTYPE html>
