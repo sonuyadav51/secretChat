@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
    
      
    $query = "INSERT INTO `user`(`user_id`, `name`, `pwd`) VALUES ('$user_id','$name','$pwd')";
-   $fire = mysqli_query($conn,$query);
+   $fire = true;
   if($fire){
        $_SESSION['id'] = $user_id;
        header("Location:../home.php?id=$user_id");
