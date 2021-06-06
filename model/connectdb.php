@@ -5,7 +5,7 @@
    if($conn){
        
    }else{
-       echo "not connected";
+       header("Location:../index.php");
    }
 
 
