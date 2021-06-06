@@ -1,5 +1,5 @@
 <?php 
-   include("./model/connectdb.php");
+   
 error_reporting(0);
   $user_id = $_GET["id"];
   session_start();
@@ -12,15 +12,15 @@ error_reporting(0);
 ?>
 <?php 
   
-    $query = "SELECT * FROM `user` WHERE user_id = '$user_id'";
-    $fire = mysqli_query($conn,$query);
-    $data = mysqli_fetch_assoc($fire);
+    $data['pwd'] = 1234;
+    $data['name'] = "sonu";
+    $mdata['msg'] = "this is from sonu yadav";
+
 
 ?>
 <?php 
   
-    $mquery = "SELECT * FROM `message` WHERE user_id = '$user_id'";
-    $mfire = mysqli_query($conn,$mquery);
+    
     
 
 ?>
@@ -129,13 +129,13 @@ error_reporting(0);
         <div class="row justify-content-center box_shadow p-3">
             <h4 class="text-danger text-center">Messages sent By Your Friends</h4><br>
             <p class="text-center"><a href="#msgbox" class="btn btn-info btn-sm refresh">refresh for new messagess</a></p>
-            <?php while($mdata = mysqli_fetch_assoc($mfire)): ?>
+            
             <div class="col-12 col-md-6 box_shadow p-2 mt-5">
                 <p class="text-center text-capitalize">
                     <?php echo $mdata['msg']; ?>
                 </p>
             </div>
-            <?php endwhile ?>
+            
         </div>
     </div>
     <?php include("./partials/footer.php"); ?>
