@@ -8,7 +8,7 @@ error_reporting(0);
    }
 //getting the full url
 //  $full_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http"). "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$full_link = "http://localhost/sonuyadav/secretweb/message.php?id=$user_id";
+$full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
 ?>
 <?php 
   
