@@ -1,7 +1,7 @@
 <!---->
 
 <?php 
-  
+  include("connectdb.php");
   require("../healper.php");
 session_start();
 if(isset($_POST['submit'])){
@@ -12,8 +12,8 @@ if(isset($_POST['submit'])){
    $pwd     =    rand(1000,9999);
    
      
-   
-   $fire = true;
+   $query = "INSERT INTO `user`(`user_id`, `name`, `pwd`) VALUES ('$user_id','$name','$pwd')";
+   $fire = mysqli_query($conn,$query);
   if($fire){
        $_SESSION['id'] = $user_id;
        header("Location:../home.php?id=$user_id");

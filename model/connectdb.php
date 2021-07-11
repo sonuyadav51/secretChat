@@ -1,11 +1,29 @@
  
 <?php
-
-  $conn = true;
+/*
+  $conn = mysqli_connect('localhost','root','sonuyadav','secretmsg');
    if($conn){
        
    }else{
-       header("Location:../index.php");
+       echo "not connected";
+   }
+*/
+
+?>
+
+ 
+<?php
+//online
+ $host = "remotemysql.com";
+ $user = "MhXSQS4apV";
+ $pwd = "BsWLe8Yyym";
+  $db = "MhXSQS4apV";
+ 
+  $conn = mysqli_connect('$host','$user','$pwd','$db');
+   if($conn){
+       
+   }else{
+       echo "not connected";
    }
 
 
