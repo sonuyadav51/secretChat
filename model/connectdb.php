@@ -9,7 +9,7 @@
  $pwd = "BsWLe8Yyym";
   $db = "MhXSQS4apV";
  
-  $conn = mysqli_connect('$host','$user','$pwd','$db');
+  $conn = mysqli_connect($host,$user,$pwd,$db);
    if($conn){
        
    }else{
