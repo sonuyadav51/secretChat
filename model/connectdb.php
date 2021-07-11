@@ -1,15 +1,5 @@
  
-<?php
-/*
-  $conn = mysqli_connect('localhost','root','sonuyadav','secretmsg');
-   if($conn){
-       
-   }else{
-       echo "not connected";
-   }
-*/
 
-?>
 
  
 <?php
