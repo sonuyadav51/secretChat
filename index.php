@@ -1,17 +1,4 @@
-<?php //error_reporting(0);?>
-<?php 
-  include("./model/connectdb.php");
-  session_start();
-  $id = $_SESSION['id'];
-  if(isset($_SESSION['id']) && !isset($_GET['status'])){
-      header("Location:home.php?id=$id");
-   }
-    $user_id = $_GET['id'];
-    $query = "SELECT * FROM `user` WHERE user_id = '$user_id'";
-    $fire = mysqli_query($conn,$query);
-    $data = mysqli_fetch_assoc($fire);
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +51,8 @@
 
                 <h1 class="text-center text-danger " style="font-size:5rem;"><i class="fas fa-heart"></i></h1>
                 
-                <h4 class="text-center">Thanks for writing anonymous message for <span class="text-capitalize"><?php echo $data['name']; ?></span>.</h4>
+ 
+                <h4 class="text-center">Thanks for writing anonymous message for <span class="text-capitalize">Sonu Yadav</span>.</h4>
                 <h2 class="text-center text-danger">#StayAtHome</h2> 
                 <?php endif ?>
             </div>

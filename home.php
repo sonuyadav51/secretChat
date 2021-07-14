@@ -1,29 +1,8 @@
 <?php 
-   include("./model/connectdb.php");
-error_reporting(0);
-  $user_id = $_GET["id"];
-  session_start();
-  if(!isset($_SESSION['id'])){
-      header("Location:index.php");
-   }
-//getting the full url
-//  $full_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http"). "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
-?>
-<?php 
-  
-    $query = "SELECT * FROM `user` WHERE user_id = '$user_id'";
-    $fire = mysqli_query($conn,$query);
-    $data = mysqli_fetch_assoc($fire);
 
+$full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=sonuYadav";
 ?>
-<?php 
-  
-    $mquery = "SELECT * FROM `message` WHERE user_id = '$user_id'";
-    $mfire = mysqli_query($conn,$mquery);
-    
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,11 +33,12 @@ $full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
                     <div class="info">
                         <h5 class="text-center">please take screenshot of following details before <span class="text-danger text-uppercase">logout!.</span></h5>
                         <hr>
+                     
                         <div class="data p-2" style="border:2px solid #ff9933; border-radius:7px;">
                             <h5>USERNAME: <span class="text-danger">
-                                    <?php echo $user_id; ?></span></h5>
+                                    SonuYAdav25</span></h5>
                             <h5>PASSWORD: <span class="text-danger">
-                                    <?php echo $data['pwd']; ?></span></h5>
+                                   2343</span></h5>
                         </div>
                         <hr>
                         <h6>you can login with this details anytime anywhere to see messages sent by your love one. <br> <span class="text-danger">password can not be restored!</span></h6>
@@ -86,7 +66,7 @@ $full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
         </a>
         <a href="#" class="btn btn-sm btn-outline-danger login text-uppercase " data-toggle="modal" data-target="#alertModal">logout</a>
 
-        <p class="text-left d-none" style="font-size:.7rem;"><span class="text-success" style="font-size:.8rem;"><?php echo $data['name']; ?> </span></p>
+        <p class="text-left d-none" style="font-size:.7rem;"><span class="text-success" style="font-size:.8rem;">Sonu YADAV </span></p>
 
     </nav>
     <div class="container mt-5 margin-top" style="margin-top:200px;">
@@ -96,11 +76,12 @@ $full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
                     <div class="info">
                         <h5 class="text-center">please take screenshot of following details</h5>
                         <hr>
+                       
                         <div class="data p-2" style="border:2px solid #ff9933; border-radius:7px;">
                             <h5>USERNAME: <span class="text-danger">
-                                    <?php echo $user_id; ?></span></h5>
+                                    SonuYAdav25</span></h5>
                             <h5>PASSWORD: <span class="text-danger">
-                                    <?php echo $data['pwd']; ?></span></h5>
+                                   2343</span></h5>
                         </div>
                         <hr>
                         <h6>you can login with this details anytime anywhere to see messages sent by your love one. <br> <span class="text-danger">password can not be restored!</span></h6>
@@ -129,13 +110,13 @@ $full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
         <div class="row justify-content-center box_shadow p-3">
             <h4 class="text-danger text-center">Messages sent By Your Friends</h4><br>
             <p class="text-center"><a href="#msgbox" class="btn btn-info btn-sm refresh">refresh for new messagess</a></p>
-            <?php while($mdata = mysqli_fetch_assoc($mfire)): ?>
+         
             <div class="col-12 col-md-6 box_shadow p-2 mt-5">
                 <p class="text-center text-capitalize">
-                    <?php echo $mdata['msg']; ?>
+                    Messages will Appear here
                 </p>
             </div>
-            <?php endwhile ?>
+           
         </div>
     </div>
     <?php include("./partials/footer.php"); ?>
