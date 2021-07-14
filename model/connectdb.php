@@ -12,6 +12,7 @@
   $conn = mysqli_connect($host,$user,$pwd,$db);
    if(!$conn){
     echo "not connected";
+    echo error();
    }
 
 
