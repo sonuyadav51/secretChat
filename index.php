@@ -1,4 +1,4 @@
-<?php  error_reporting(0);?>
+<?php //error_reporting(0);?>
 <?php 
   include("./model/connectdb.php");
   session_start();
