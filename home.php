@@ -30,7 +30,7 @@ $full_link = "https://sonu-secret-msg.herokuapp.com/message.php?id=$user_id";
 
 <head>
 
-    <title>secretchitchat 2020</title>
+    <title>secret chat 2020</title>
     <?php include("./partials/style.php"); ?>
    
 </head>

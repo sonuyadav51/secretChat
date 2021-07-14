@@ -10,10 +10,8 @@
   $db = "MhXSQS4apV";
  
   $conn = mysqli_connect($host,$user,$pwd,$db);
-   if($conn){
-       
-   }else{
-       echo "not connected";
+   if(!$conn){
+    echo "not connected";
    }
 
 
